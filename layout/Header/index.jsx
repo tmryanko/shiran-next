@@ -4,17 +4,22 @@ import Container from '@mui/material/Container';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
+import Link from 'next/link';
 
 const Header = () => {
   return (
-    <AppBar>
+    <AppBar position='static'>
       <Container>
         <Toolbar>
-          <Typography>LOGO</Typography>
+          <Typography>
+            <Link href='/'>
+              <a>LOGO</a>
+            </Link>
+          </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            <Button sx={{ my: 2, color: 'white', display: 'block' }}>dd</Button>
-            <Button sx={{ my: 2, color: 'white', display: 'block' }}>ee</Button>
+            <Link href='/about'>
+              <a>about</a>
+            </Link>
           </Box>
         </Toolbar>
       </Container>
